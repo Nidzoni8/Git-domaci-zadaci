@@ -16,18 +16,18 @@ Npr ako je broj 11, onda je celija u drugom redu i 3.koloni obojena crno.
 <?php
     $a = mt_rand(1,64);
     echo "<table border='1'>";
-        for($i=1; $i<=$a; $i++){
+        for($i=1; $i<=8; $i++){
             echo "<tr>";
-                for($j=1; $j <=$a; $j++){
-                    if($a % 8 == $j and ceil($a / 8) == $i){
-                        echo "<td style='background-color:black'>$a</td>";
-                    }
+            for($j=1; $j<=8; $j++){
+                if($a % 8 == $j and ceil($a / 8)==$i){
+                    echo "<td style='background-color:black; height:30px; width:30px;'>".$a."</td>";
+                }else{
+                    echo "<td style='height:30px; width:30px;'></td>";
                 }
+            }
             echo "</tr>";
         }
-
-    echo "</table>";
-        //Nisam bas najbolje razumeo text zadatka ne znam sta se tacno trazi
+        echo "</table>";
 ?>
 </body>
 </html>

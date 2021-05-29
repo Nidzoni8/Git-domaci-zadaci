@@ -11,22 +11,20 @@
     који имају текст од 1 до M</p>
 
     <?php
-        function createDivs($n, $m){
-            return "<div><span></span></div> <br>";
+    function createDivs($n, $m){
+        $result = "";
+        for($i=1; $i<=$n; $i++){
+            $result .= "<div>";
+            for($j=1; $j<=$m; $j++){
+                $result .= "<span>$j</span>";
+            }
+        $result .= "</div>";
         }
-
-        $n = mt_rand(1,10);
-        $m = mt_rand(1,5);
-        for($i = 1; $i <= $n; $i++){
-            echo "<div>";
-                for($j = 1; $j <= $m; $j++){
-                    echo "<span>$j</span>";
-                }
-            echo "</div>";
-        }
-
-        createDivs($n, $m);
-
+        return $result;
+    }
+    $n = mt_rand(1,10);
+    $m = mt_rand(1,5);
+    echo createDivs($n, $m);
     ?>
 </body>
 </html>
